@@ -6,12 +6,10 @@
 let str1 = 'i am in the easycode';
 let str2 = '';
 
-for (var i = 0; i < str1.length; i++) {
-	if (i === 0) {
-		str2 += str1[0].toUpperCase();
-	} else if (str1[i - 1] === ' ') {
-  		str2 +=  str1[i].toUpperCase();
-  	} else {
+for (let i = 0; i < str1.length; i++) {
+	if (i === 0 || str1[i - 1] === ' ') {
+		str2 += str1[i].toUpperCase();
+	} else {
   		str2 += str1[i];
   	}
 }
@@ -23,7 +21,7 @@ console.log(str2);
 let str3 = 'tseb eht ma i';
 let str4 = '';
 
-for (var i = str3.length - 1; i >= 0; i--) {
+for (let i = str3.length - 1; i >= 0; i--) {
 	str4 += str3[i];
 }
 
@@ -33,8 +31,8 @@ console.log(str4);
 
 let a = 1;
 
-for (var i = 0; i < 10; i++) {
-	a *= i + 1;
+for (let i = 1; i <= 10; i++) {
+	a *= i;
 }
 
 console.log(a);
@@ -44,7 +42,7 @@ console.log(a);
 let str5 = 'JavaScript is a pretty good language';
 let str6 = '';
 
-for (var i = 0; i < str5.length; i++) {
+for (let i = 0; i < str5.length; i++) {
 	str6 += ((str5[i - 1] === ' ') ? str5[i].toUpperCase() : str5[i]).split(' ').join('');
 }
 
